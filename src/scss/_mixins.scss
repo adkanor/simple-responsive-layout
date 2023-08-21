@@ -1,0 +1,67 @@
+@mixin fontLato-normal{
+font-family: $font-Lato;
+font-weight: 400;
+}
+@mixin fontLato-bold{
+    font-family: $font-Lato;
+font-weight: 700;
+}
+@mixin fontLato-italic{
+    font-family: $font-Lato;
+font-weight: 700;
+font-style: italic;
+}
+@mixin fontMontserrat-normal{
+    font-family: $font-Montserrat;
+font-weight: 400;
+}
+@mixin fontMontserrat-bold{
+    font-family: $font-Montserrat;
+    font-weight: 700;
+}
+// new mixins (Oksana)
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+@mixin button {
+    display: inline-block;
+    color:$white-color;
+    background-color: $purple-color;
+    border-radius: 40px;
+    @include fontMontserrat-bold ;
+    text-align: center;
+}
+
+@mixin centerPosition{
+    max-width: 1200px;
+    margin: 0 auto;
+    min-width: 320px;
+    padding: 0px 10px;
+}
+
+@mixin pricingCard{
+    @include fontMontserrat-normal;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+@mixin flexCenter{
+    text-align: center;
+    align-items: center;
+}
+@mixin backgroundPosition{
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #24292f;
+    min-width: 320px;
+    width: 100vw;
+}

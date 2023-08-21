@@ -1,0 +1,18 @@
+image: node:18-slim
+
+before_script:
+  - npm install
+
+pages:
+  stage: deploy
+  script:
+    - node_modules/gulp/bin/gulp.js --gulpfile ./gulpfile.js build
+    - mkdir public
+    - cp -r ./dist/* public
+
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+  
